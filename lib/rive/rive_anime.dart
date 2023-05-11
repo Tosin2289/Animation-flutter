@@ -1,9 +1,13 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+
 import 'package:rive/rive.dart';
 
 import 'componets/animated_btn.dart';
+import 'componets/custom_signin_dialog.dart';
+import 'componets/sign_in_form.dart';
 
 class riveAnimeOnboarding extends StatefulWidget {
   const riveAnimeOnboarding({Key? key}) : super(key: key);
@@ -13,6 +17,7 @@ class riveAnimeOnboarding extends StatefulWidget {
 }
 
 class _riveAnimeOnboardingState extends State<riveAnimeOnboarding> {
+  bool isSignInDialogShown = false;
   late RiveAnimationController _btnAnimationController;
   @override
   void initState() {
@@ -42,46 +47,66 @@ class _riveAnimeOnboardingState extends State<riveAnimeOnboarding> {
             child: SizedBox(),
             filter: ImageFilter.blur(sigmaX: 30, sigmaY: 30),
           )),
-          SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 32.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Spacer(),
-                  SizedBox(
-                    width: 260,
-                    child: Column(
-                      children: const [
-                        Text(
-                          "Learn design & code",
-                          style: TextStyle(
-                              fontSize: 60,
-                              fontFamily: "Poppins",
-                              height: 1.2,
-                              fontWeight: FontWeight.w700),
-                        ),
-                        SizedBox(
-                          height: 16,
-                        ),
-                        Text(
-                            "Don't skip designs. Learn design and code by building real apps with flutter and Swfit. Complete courses about the best tools.")
-                      ],
+          AnimatedPositioned(
+            top: isSignInDialogShown ? -50 : 0,
+            duration: const Duration(milliseconds: 240),
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            child: SafeArea(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Spacer(),
+                    SizedBox(
+                      width: 260,
+                      child: Column(
+                        children: const [
+                          Text(
+                            "Learn design & code",
+                            style: TextStyle(
+                                fontSize: 60,
+                                fontFamily: "Poppins",
+                                height: 1.2,
+                                fontWeight: FontWeight.w700),
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                              "Don't skip designs. Learn design and code by building real apps with flutter and Swfit. Complete courses about the best tools.")
+                        ],
+                      ),
                     ),
-                  ),
-                  Spacer(),
-                  AnimatedBtn(
-                    btnAnimationController: _btnAnimationController,
-                    press: () {
-                      _btnAnimationController.isActive = true;
-                    },
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 24.0),
-                    child: Text(
-                        "Purchase includes acess to 30+ cources,240+ premimum tutorials,120+ hours of videos,source file and certificates"),
-                  )
-                ],
+                    Spacer(),
+                    AnimatedBtn(
+                      btnAnimationController: _btnAnimationController,
+                      press: () {
+                        _btnAnimationController.isActive = true;
+
+                        Future.delayed(
+                          Duration(milliseconds: 800),
+                          () {
+                            setState(() {
+                              isSignInDialogShown = true;
+                            });
+                            customSignInDialog(context, onClosed: (_) {
+                              setState(() {
+                                isSignInDialogShown = false;
+                              });
+                            });
+                          },
+                        );
+                      },
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 24.0),
+                      child: Text(
+                          "Purchase includes acess to 30+ cources,240+ premimum tutorials,120+ hours of videos,source file and certificates"),
+                    )
+                  ],
+                ),
               ),
             ),
           )
