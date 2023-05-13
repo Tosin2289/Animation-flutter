@@ -58,7 +58,7 @@ class _riveAnimeOnboardingState extends State<riveAnimeOnboarding> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Spacer(),
+                    const Spacer(),
                     SizedBox(
                       width: 260,
                       child: Column(
@@ -79,14 +79,14 @@ class _riveAnimeOnboardingState extends State<riveAnimeOnboarding> {
                         ],
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     AnimatedBtn(
                       btnAnimationController: _btnAnimationController,
                       press: () {
                         _btnAnimationController.isActive = true;
 
                         Future.delayed(
-                          Duration(milliseconds: 800),
+                          const Duration(milliseconds: 800),
                           () {
                             setState(() {
                               isSignInDialogShown = true;
@@ -100,7 +100,7 @@ class _riveAnimeOnboardingState extends State<riveAnimeOnboarding> {
                         );
                       },
                     ),
-                    Padding(
+                    const Padding(
                       padding: const EdgeInsets.symmetric(vertical: 24.0),
                       child: Text(
                           "Purchase includes acess to 30+ cources,240+ premimum tutorials,120+ hours of videos,source file and certificates"),

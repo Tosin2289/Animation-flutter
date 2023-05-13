@@ -1,6 +1,5 @@
 import 'package:animation/rive/rive_anime.dart';
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Color(0xFFEEF1F8),
         primarySwatch: Colors.blue,
         fontFamily: "Intel",
-        inputDecorationTheme: InputDecorationTheme(
+        inputDecorationTheme: const InputDecorationTheme(
           filled: true,
           fillColor: Colors.white,
           errorStyle: TextStyle(height: 0),

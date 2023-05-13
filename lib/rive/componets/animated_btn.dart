@@ -27,7 +27,7 @@ class AnimatedBtn extends StatelessWidget {
                 top: 8,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const[
                     Icon(Icons.arrow_forward),
                     SizedBox(
                       width: 8,

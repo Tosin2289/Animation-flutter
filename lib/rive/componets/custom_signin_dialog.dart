@@ -9,7 +9,7 @@ Future<Object?> customSignInDialog(BuildContext context,
     barrierDismissible: true,
     barrierLabel: "Sign in",
     context: context,
-    transitionDuration: Duration(milliseconds: 400),
+    transitionDuration: const Duration(milliseconds: 400),
     transitionBuilder: (_, animation, __, child) {
       Tween<Offset> tween;
       tween = Tween(begin: Offset(0, -1), end: Offset.zero);
@@ -23,8 +23,8 @@ Future<Object?> customSignInDialog(BuildContext context,
     pageBuilder: ((context, _, __) => Center(
           child: Container(
             height: 620,
-            padding: EdgeInsets.symmetric(horizontal: 24, vertical: 32),
-            margin: EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
+            margin: const EdgeInsets.symmetric(horizontal: 16),
             decoration: BoxDecoration(
               color: Colors.white.withOpacity(0.9),
               borderRadius: BorderRadius.circular(40),
@@ -35,26 +35,26 @@ Future<Object?> customSignInDialog(BuildContext context,
                 clipBehavior: Clip.none,
                 children: [
                   Column(children: [
-                    Text(
+                    const Text(
                       "Sign In ",
                       style: TextStyle(
                           fontSize: 34,
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w700),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 16.0),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 16.0),
                       child: Text(
                         "Acess to 240+ hours of content. Learn design and code,by building real apps with Flutter.",
                         textAlign: TextAlign.center,
                       ),
                     ),
-                    signinForm(),
+                    const signinForm(),
                     Row(
-                      children: [
+                      children: const [
                         Expanded(child: Divider()),
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Text(
                             "OR",
                             style: TextStyle(color: Colors.black26),
@@ -63,9 +63,9 @@ Future<Object?> customSignInDialog(BuildContext context,
                         Expanded(child: Divider()),
                       ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 8.0, vertical: 20),
+                    const Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 8.0, vertical: 20),
                       child: Text("Sign up with Email, Apple or Google",
                           style: TextStyle(color: Colors.black54)),
                     ),
@@ -102,7 +102,7 @@ Future<Object?> customSignInDialog(BuildContext context,
                       ],
                     ),
                   ]),
-                  Positioned(
+                  const Positioned(
                     bottom: -48,
                     left: 0,
                     right: 0,
