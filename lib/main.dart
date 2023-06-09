@@ -2,6 +2,8 @@ import 'package:animation/rive/rive_anime.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
+import 'lottie/lottie_anime.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
           errorBorder: defaultInputBorder,
         ),
       ),
-      home: const riveAnimeOnboarding(),
+      home: const lottieAnime(),
     );
   }
 }
