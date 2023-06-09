@@ -1,16 +1,10 @@
-# animation
+# Aanimation
 
-A new Flutter project.
+Flutter animation using rive and lottie packages
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+# Using Lottie
+[untitled.webm](https://github.com/Tosin2289/Animation-flutter/assets/66890167/15ef9449-6537-4533-a3c1-1aed79fa6b20)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Using Rive
