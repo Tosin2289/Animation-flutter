@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
           errorBorder: defaultInputBorder,
         ),
       ),
-      home: const lottieAnime(),
+      home: const riveAnimeOnboarding(),
     );
   }
 }
