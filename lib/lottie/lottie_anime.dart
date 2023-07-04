@@ -8,8 +8,7 @@ class lottieAnime extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Lottie.network(
-            'https://assets10.lottiefiles.com/packages/lf20_kx6a1byu.json'),
+        child: Lottie.asset('assets/dance.json'),
       ),
     );
   }
