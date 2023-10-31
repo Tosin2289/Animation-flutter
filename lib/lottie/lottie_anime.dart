@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-class lottieAnime extends StatelessWidget {
-  const lottieAnime({Key? key}) : super(key: key);
+class LottieAnime extends StatelessWidget {
+  const LottieAnime({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -5,7 +5,7 @@ import 'package:lottie/lottie.dart';
 import 'lottie/lottie_anime.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -17,10 +17,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'CODE Blast',
       theme: ThemeData(
-        scaffoldBackgroundColor: Color(0xFFEEF1F8),
+        scaffoldBackgroundColor: const Color(0xFFEEF1F8),
         primarySwatch: Colors.blue,
         fontFamily: "Intel",
-        inputDecorationTheme: InputDecorationTheme(
+        inputDecorationTheme: const InputDecorationTheme(
           filled: true,
           fillColor: Colors.white,
           errorStyle: TextStyle(height: 0),
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
           errorBorder: defaultInputBorder,
         ),
       ),
-      home: const lottieAnime(),
+      home: const LottieAnime(),
     );
   }
 }
