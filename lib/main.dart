@@ -1,8 +1,5 @@
-import 'package:animation/rive/rive_anime.dart';
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
-
-import 'lottie/lottie_anime.dart';
+import 'implicit_examples/animated_shopping_cart_button.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'CODE Blast',
       theme: ThemeData(
+        useMaterial3: true,
         scaffoldBackgroundColor: const Color(0xFFEEF1F8),
         primarySwatch: Colors.blue,
         fontFamily: "Intel",
@@ -30,7 +28,7 @@ class MyApp extends StatelessWidget {
           errorBorder: defaultInputBorder,
         ),
       ),
-      home: const LottieAnime(),
+      home: const ShoppingCartButton(),
     );
   }
 }
