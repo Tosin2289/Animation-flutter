@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'implicit_examples/animated_shopping_cart_button.dart';
+import 'implicit_examples/animated_tween_animation_builder_example.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           errorBorder: defaultInputBorder,
         ),
       ),
-      home: const ShoppingCartButton(),
+      home: const PulsatingCircleAnimation(),
     );
   }
 }
