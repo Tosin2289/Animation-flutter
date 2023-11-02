@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'explicit_examples/login_animation.dart';
+import 'explicit_examples/list_animation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           errorBorder: defaultInputBorder,
         ),
       ),
-      home: const LoginScreenAnimation(),
+      home: const ListAnimation(),
     );
   }
 }
