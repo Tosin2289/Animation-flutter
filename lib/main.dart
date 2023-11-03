@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'explicit_examples/list_animation.dart';
+import 'explicit_examples/loading_animation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +28,10 @@ class MyApp extends StatelessWidget {
           errorBorder: defaultInputBorder,
         ),
       ),
-      home: const ListAnimation(),
+      home: const RadialProgressAnimation(
+        progress: 0.65,
+        color: Colors.blue,
+      ),
     );
   }
 }
