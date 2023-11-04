@@ -1,6 +1,5 @@
-import 'package:animation/page_route_builder_animation/splash_animation.dart';
 import 'package:flutter/material.dart';
-import 'explicit_examples/loading_animation.dart';
+import 'custom_painter_example/bouncing_ball_animation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +28,7 @@ class MyApp extends StatelessWidget {
             errorBorder: defaultInputBorder,
           ),
         ),
-        home: const SplashAnimation());
+        home: const BouncingBallAnimation());
   }
 }
 
