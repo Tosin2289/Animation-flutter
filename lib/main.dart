@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'custom_painter_example/bouncing_ball_animation.dart';
+import 'hero/hero_animation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
             errorBorder: defaultInputBorder,
           ),
         ),
-        home: const BouncingBallAnimation());
+        home: HeroAnimation());
   }
 }
 
